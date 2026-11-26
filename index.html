@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Web Security Scanner</title><link rel="stylesheet" href="/style.css"></head>
+<body><main class="wrap"><header><div class="logo">🛡️</div><div><h1>WEB SECURITY SCANNER</h1><p>Quét liên kết & kiểm tra cấu hình bảo mật cơ bản</p></div></header>
+<section class="panel"><label for="url">Website cần kiểm tra</label><div class="entry"><input id="url" type="url" placeholder="https://example.com"><button id="scan">Bắt đầu quét</button></div>
+<p class="note">Chỉ quét website bạn sở hữu hoặc được ủy quyền. Chế độ kiểm tra thụ động, không khai thác lỗ hổng.</p><div id="status" role="status"></div></section>
+<section id="summary" class="stats hidden"></section>
+<section id="findings" class="panel hidden"><h2>Liên kết được kiểm tra</h2><div class="toolbar"><input id="filter" placeholder="Lọc theo URL, lỗi hoặc trạng thái"><button id="csv" class="secondary">Xuất CSV</button></div><div class="tablewrap"><table><thead><tr><th>URL</th><th>HTTP</th><th>Mức độ</th><th>Giải thích</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+<section id="headers" class="panel hidden"><h2>Kiểm tra Security Headers</h2><div id="headerRows"></div><p class="note">Thiếu header là dấu hiệu cần xem xét, không tự động chứng minh website có thể bị tấn công.</p></section>
+<footer>WEB SECURITY SCANNER · Passive checks · Không thực hiện khai thác</footer></main><script src="/app.js"></script></body></html>
